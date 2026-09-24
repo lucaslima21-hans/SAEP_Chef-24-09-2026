@@ -1,0 +1,110 @@
+:root {--verde:   #1B3C29;--amarelo: #F6A823;--branco:  #FFFFFF;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+font-family: 'Poppins', sans-serif;
+background: var(--branco);
+color: var(--verde);
+}
+.oculto { display: none !important; }
+/* ---------- Cabeçalho: três seções lado a lado ---------- */
+.cabecalho {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 16px 32px;
+border-bottom: 2px solid #eee;
+}
+.seccao-usuario { display: flex; align-items: center; gap: 12px; flex: 1; }
+.seccao-empresa { flex: 1; text-align: center; }
+.seccao-login   { flex: 1; display: flex; justify-content: flex-end; gap: 10px; }
+/* Foto de perfil ARREDONDADA, como o caderno pede */
+.foto-perfil {
+width: 48px; height: 48px;
+border-radius: 50%;
+object-fit: cover;
+}
+/* ---------- Botões ---------- */
+.btn-verde {
+background: var(--verde);
+color: var(--branco);
+border: none;
+padding: 10px 20px;
+border-radius: 6px;
+font-family: 'Poppins', sans-serif;
+cursor: pointer;
+}
+.btn-verde:disabled { opacity: .5; cursor: not-allowed; }
+.btn-vazado {
+background: none;
+color: var(--verde);
+border: 2px solid var(--verde);
+padding: 8px 20px;
+border-radius: 6px;
+font-family: 'Poppins', sans-serif;
+cursor: pointer;
+}
+/* ---------- Busca ---------- */
+.busca { position: relative; max-width: 520px; margin: 32px auto 8px; }
+.busca input {
+width: 100%;
+padding: 12px 44px 12px 16px;
+border: 2px solid var(--verde);
+border-radius: 8px;
+font-family: 'Poppins', sans-serif;
+}
+.icone-lupa {
+position: absolute; right: 14px; top: 50%;
+transform: translateY(-50%);
+width: 20px;
+}
+/* ---------- Mural: TRÊS COLUNAS POR LINHA ---------- */
+.mural {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+padding: 32px;
+max-width: 1100px;
+margin: 0 auto;
+}
+.erro { color: #c0392b; font-size: 13px; display: block; min-height: 18px; }
+
+.card { text-align: center; }
+
+.card-imagem { position: relative; overflow: hidden; border-radius: 10px; }
+.card-imagem img { width: 100%; display: block; }
+/* O tooltip fica escondido e sobe no hover */
+.tooltip {
+position: absolute;
+inset: 0;                                  
+/* cobre a imagem inteira */
+background: rgba(27, 60, 41, .88);         
+color: var(--branco);
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 12px;
+font-size: 14px;
+opacity: 0;
+transition: opacity .25s;
+}
+.card-imagem:hover .tooltip { opacity: 1; }
+/* verde da marca com transparência */
+.favoritar {
+background: none; border: none; cursor: pointer;
+display: inline-flex; align-items: center; gap: 6px;
+color: var(--verde); font-family: 'Poppins', sans-serif;
+}
+.favoritar img { width: 22px; }
+
+.rodape {
+    background: var(--verde);
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    margin-top: 48px;
+    }
+    .redes { display: flex; gap: 18px; }
+    .redes img { width: 24px; }

@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.4.0",
+    "pg": "^8.23.0"
+  },
+  "types":"module",
+  "name": "saep_chef-24-09-2026",
+  "version": "1.0.0",
+   "description": "",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaslima21-hans/SAEP_Chef-24-09-2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucaslima21-hans/SAEP_Chef-24-09-2026/issues"
+  },
+  "homepage": "https://github.com/lucaslima21-hans/SAEP_Chef-24-09-2026#readme"
+}

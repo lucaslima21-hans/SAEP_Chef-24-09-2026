@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAEPChef</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ============ 1. CABEÇALHO ============ -->
+<header class="cabecalho">
+<!-- 1.1 Seção usuário -->
+<div class="seccao-usuario">
+<img id="foto-perfil" class="foto-perfil" src="" alt="Foto de perfil">
+<span id="nome-usuario"></span>
+<button id="btn-ver-perfil" class="btn-verde" disabled>Ver Perfil</button>
+</div>
+<!-- 1.2 Seção empresa -->
+<div class="seccao-empresa">
+<h1>SAEPChef</h1>
+</div>
+<!-- 1.3 Botão de login -->
+<div class="seccao-login">
+<button id="btn-login" class="btn-verde">Login</button>
+<button id="btn-logout" class="btn-verde oculto">Logout</button>
+</div>
+</header>
+<!-- ============ 2. CORPO ============ -->
+<main>
+<!-- 2.1 Campo de busca -->
+<form id="form-busca" class="busca">
+<input type="text" id="campo-busca"
+placeholder="Digite o nome do chef... ex: @chef1">
+<img src="svg/lupa.svg" alt="Buscar" class="icone-lupa">
+</form>
+<p id="erro-busca" class="erro"></p>
+<!-- 2.2 Mural de receitas -->
+<section id="mural" class="mural"></section>
+<!-- Tela de cadastro (aparece ao clicar em "Suas receitas") -->
+<section id="tela-receitas" class="oculto">
+    <form id="form-receita" class="form-receita" enctype="multipart/form-data">
+      <label for="titulo">Título da Receita</label>
+      <input type="text" id="titulo" name="titulo"
+             placeholder="ex.: Risoto de Funghi">
+      <small id="erro-titulo" class="erro"></small>
+      <label for="origem">Origem da receita</label>
+      <input type="text" id="origem" name="origem" placeholder="ex.: Itália">
+      <small id="erro-origem" class="erro"></small>
+      <label for="imagem">Imagem</label>
+      <div class="upload">
+        <label for="imagem" class="btn-arquivo">Escolher arquivo</label>
+        <input type="file" id="imagem" name="imagem" class="oculto"
+               accept=".jpg,.jpeg,.png,.gif,.webp">
+        <span id="nome-arquivo">Nenhum arquivo escolhido</span>
+      </div>
+      <small id="erro-imagem" class="erro"></small>
+      <button type="submit" class="btn-verde">Cadastrar</button>
+    </form>
+    <ul id="lista-receitas" class="lista-receitas"></ul>
+  </section>
+</main>
+<!-- ============ 3. RODAPÉ ============ -->
+<footer class="rodape">
+  <span class="rodape-esq">SAEPChef</span>
+  <div class="redes">
+    <a href="#"><img src="svg/instagram.svg" alt="Instagram"></a>
+    <a href="#"><img src="svg/tiktok.svg" alt="TikTok"></a>
+    <a href="#"><img src="svg/linkedIn.svg" alt="LinkedIn"></a>
+    <a href="#"><img src="svg/youtube.svg" alt="YouTube"></a>
+  </div>
+  <span class="rodape-dir">Copyright 2026-2027</span>
+</footer>
+<!-- ============ MODAL DE LOGIN ============ -->
+<div id="modal-login" class="modal oculto">
+  <div class="modal-caixa">
+    <img src="svg/fechar.svg" alt="Fechar" id="fechar-modal" class="fechar">
+    <h2>Login</h2>
+    <form id="form-login">
+      <input type="email" id="email" placeholder="Digite seu e-mail">
+      <small id="erro-email" class="erro"></small>
+      <input type="password" id="senha" placeholder="Digite sua senha">
+      <small id="erro-senha" class="erro"></small>
+      <small id="erro-login" class="erro"></small>
+      <div class="modal-botoes">
+        <button type="button" id="btn-cancelar" class="btn-vazado">Cancelar</button>
+        <button type="submit" class="btn-verde">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- ============ MENU LATERAL ============ -->
+<aside id="menu-lateral" class="menu-lateral oculto">
+    <img src="svg/fechar.svg" alt="Fechar" id="fechar-menu" class="fechar">
+    <p><strong id="total-favoritos"></strong> Favoritos</p>
+    <p><strong id="total-receitas"></strong> Receitas</p>
+    <button id="btn-suas-receitas">Suas receitas</button>
+    </aside>
+    <script src="js/app.js"></script>
+    </body>
+    </html>
